@@ -1,0 +1,37 @@
+Data Life Cycle:
+
+Problem Definition : a problem definition should not be more than 2 or 2.5 lines of text
+	
+	# Clarify Objective:
+	# Choose ML Paradigm:
+	# Define data & model constraints: 
+
+2. Data Acquisition or data collection: Data collection
+
+	# Identify Sources
+	# Collect & Ingest
+	# Store & version
+
+3. Data exploration and profiling: once we have data we need to explore (ask customer about the data and collect)
+
+4. Data Cleaning and pre processing: check if there are any garbage , null ,format etc., check data with all possibilities and process it.
+
+5. Feature Engineering: 
+
+6. Feature Selection or Extraction : 
+
+7. Encoding & Representation:
+
+8. Train-Test-Split & Validation Strategy:
+
+9. Model Training:
+
+10. Model Evaluation:
+
+11. Model Selection & Finalization: 
+
+12. Model Deployment:
+
+13. Maintenance & Continuous Learning:
+
+14. Documentation & Communication :
