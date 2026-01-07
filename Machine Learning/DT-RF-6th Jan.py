@@ -1,6 +1,9 @@
 # Decision Tree and Random Forest Implementation as supervised  Learning Models
 # Its like az tree structure where each node represents a feature ( or attribute),
 # each branch represents a decision rule, and each leaf node represents an outcome ( or target value/ class label).
+# PNMSST, model ,any metrics of our choice (we can use here Decision Tree and Random Forest Classifier)
+# PNM SST MMM(model , Metrics , Mlflow)
+# ILC MST CPP E
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -44,7 +47,7 @@ dt_pred = dt.predict(X_test) # make predictions
 # evaluate the Decision Tree model
 dt_accuracy = accuracy_score(y_test, dt_pred)
 print("Decision Tree Accuracy:", dt_accuracy)
-print("Classification Report:\n", classification_report(y_test, dt_pred))
+print("Classification Report:\n", classification_report(y_test, dt_pred)) # how much loss is making (actual - predicted)
 
 # Visualize the Decision Tree
 plt.figure(figsize=(12,8))
@@ -61,7 +64,7 @@ rf_pred = rf.predict(X_test) # make predictions
 
 # evaluate the Random Forest model
 rf_accuracy = accuracy_score(y_test, rf_pred)
-print("Random Forest Accuracy:, rf_accuracy:.4f}")
+print(f"Random Forest Accuracy: {rf_accuracy:.4f}")
 print("Classification Report:\n", classification_report(y_test, rf_pred))           
 
 # Visualize one of the trees in the Random Forest
@@ -76,7 +79,14 @@ with mlflow.start_run(run_name="DT_RF_Classifier_Run"):   #2nd starting the run
     mlflow.log_metric("dt_accuracy", dt_accuracy)
     mlflow.sklearn.log_model(dt, "decision_tree_model")
 
+    # Log Random Forest model
+    mlflow.log_param('model_type', 'Random Forest')
+    mlflow.log_param('n_estimators', 100)
+    mlflow.log_metric("rf_accuracy", rf_accuracy)
+    mlflow.sklearn.log_model(rf, "random_forest_model") 
+
+
     #configuring auto logging
-    mlflow.sklearn.autolog() # we enable auto logging for sklearn models instead of writing all the log statements manually .
+    #mlflow.sklearn.autolog() # we enable auto logging for sklearn models instead of writing all the log statements manually .
 
 
