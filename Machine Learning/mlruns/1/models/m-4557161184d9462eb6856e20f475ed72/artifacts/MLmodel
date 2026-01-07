@@ -1,0 +1,22 @@
+artifact_path: file:///c:/Users/sirit/OneDrive/Documents/AI-ML_Training/Machine Learning/mlruns/1/models/m-4557161184d9462eb6856e20f475ed72/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.11
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.8.1
+model_id: m-4557161184d9462eb6856e20f475ed72
+model_size_bytes: 1908
+model_uuid: m-4557161184d9462eb6856e20f475ed72
+prompts: null
+run_id: cee3568de50745a7b38844093b45379b
+utc_time_created: '2026-01-06 00:29:28.453455'

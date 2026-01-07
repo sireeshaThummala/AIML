@@ -1,0 +1,10 @@
+import pandas as pd #
+import numpy as np # numerical computing library
+import matplotlib.pyplot as plt # plotting library
+import seaborn as sns # data visualization library
+
+
+! pip install -qu pandas
+! pip install -qu numpy #quiet mode
+! pip install -qu matplotlib
+! pip install -qu seaborn
